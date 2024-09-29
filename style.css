@@ -1,0 +1,267 @@
+:root {
+    --main-bg-color: #1a1a1a;
+    --secondary-bg-color: #1e1e1e;
+    --main-text-color: white;
+    --accent-color: brown;
+    --hover-color: #4078c0;
+    --header-height: 60px;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+.head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-bg-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    height: var(--header-height);
+}
+
+.logo p {
+    color: var(--main-text-color);
+    font-size: 1.5rem;
+    text-decoration: line-through var(--hover-color);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    margin-left: 2rem;
+}
+
+.navbar a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--hover-color);
+}
+
+section {
+    padding-top: calc(var(--header-height) + 2rem);
+    margin-top: -var(--header-height);
+}
+
+section#Home.body,
+section#about.about, 
+section#internship.internship,
+section#Projects.projects, 
+section#contact.contact {
+    width: 90%;
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    padding-top: calc(var(--header-height) + 2rem);
+    background-color: var(--secondary-bg-color);
+    transition: transform 0.3s ease;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img img {
+    width: 250px;
+    height: 250px;
+    box-shadow: 5px 10px var(--hover-color);
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.img img:hover {
+    transform: scale(1.05);
+}
+
+.name {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#naam {
+    font-size: 3rem;
+}
+
+#stact {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.about:hover,
+.education:hover,
+.internship:hover,
+.projects:hover,
+.contact:hover {
+    transform: scale(1.05);
+}
+
+.education {
+    width: 90%;
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: var(--secondary-bg-color);
+    transition: transform 0.3s ease;
+}
+
+.diploma, .btech {
+    margin-bottom: 2rem;
+}
+
+.diploma img, .btech img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.project-list ul {
+    list-style: none;
+}
+
+.project-list ul li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: var(--main-bg-color);
+    transition: transform 0.3s ease;
+}
+
+.project-list ul li:hover {
+    transform: scale(1.05);
+}
+
+.project-list ul li a {
+    text-decoration: none;
+    color: var(--main-text-color);
+    font-size: 1.2rem;
+}
+
+.inter-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.inter-head h1:hover {
+    color: var(--hover-color);
+}
+
+.internship img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.logos ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.logos ul li {
+    margin: 1rem;
+}
+
+.logos a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.logos a:hover {
+    color: var(--hover-color);
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--secondary-bg-color);
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--hover-color);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --header-height: 120px;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    .head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        margin-top: 1rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 0.5rem 0;
+    }
+
+    section#Home.body {
+        padding-top: calc(var(--header-height) + 2rem);
+    }
+
+    #naam {
+        font-size: 2rem;
+    }
+
+    section#about.about, 
+    section#internship.internship,
+    section#Projects.projects, 
+    section#contact.contact,
+    .education {
+        width: 95%;
+        padding: 1rem;
+        padding-top: calc(var(--header-height) + 2rem);
+    }
+}
